@@ -1,1 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>静默区 SILENT AREA｜现代信息化战争战棋</title>
+  <meta name="description" content="《静默区》是一款以现代军事与信息化战争为题材的回合制战棋游戏。搜索、发现、摧毁，在战争迷雾中建立信息优势。" />
+  <meta property="og:title" content="静默区 SILENT AREA" />
+  <meta property="og:description" content="现代军事 × 信息化战争 × 回合制战棋 × 卡牌机制" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Silent Area Home">
+      <span class="brand-mark">SA</span>
+      <span><b>SILENT AREA</b><small>静默区</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="site-nav" aria-label="主要导航">
+      <a href="#features">机制</a>
+      <a href="#game-loop">战役</a>
+      <a href="#units">单位</a>
+      <a href="#join">关注</a>
+    </nav>
+  </header>
 
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <p class="tac-kicker">MODERN WARFARE · TACTICS · CARD-BASED MECHANICS</p>
+        <div class="hero-title-wrap">
+          <p class="signal-word" aria-hidden="true">SEEK & STRIKE</p>
+          <h1><span class="title-cn">静默区</span><span class="title-en">SILENT AREA</span></h1>
+        </div>
+        <p class="hero-tagline">21世纪现代战争，中国-北约战争题材战棋推演</p>
+        <p class="lead">《静默区》（SILENT AREA）是一款以现代军事与信息化战争为题材的回合制战棋游戏，玩家通过侦查、心理战、补给线管理和区域控制，运筹帷幄，利用信息与战术优势打败敌人。</p>
+        <div class="hero-tags" aria-label="游戏特性标签">
+          <span>回合制战棋</span><span>实时战术思维</span><span>PVP / PVE</span><span>现代装备体系</span><span>电子压制</span><span>补给线</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#join">关注开发进度</a>
+          <a class="button ghost" href="#features">查看核心机制</a>
+        </div>
+      </div>
+      <div class="command-card" aria-label="Tactical command interface preview">
+        <div class="radar" aria-label="实时本地时间雷达投影">
+          <div class="radar-sweep"></div>
+          <i class="radar-blip hour-blip" aria-hidden="true"></i>
+          <i class="radar-blip minute-blip" aria-hidden="true"></i>
+          <i class="radar-blip second-blip" aria-hidden="true"></i>
+          <i class="radar-hover-signal" aria-hidden="true"></i>
+        </div>
+        <div class="status-grid">
+          <div><small>HP</small><b>生命值</b></div>
+          <div><small>ATK</small><b>攻击力</b></div>
+          <div><small>DEF</small><b>防御力</b></div>
+          <div><small>SIG</small><b>隐蔽值</b></div>
+          <div><small>REC</small><b>侦察值</b></div>
+          <div><small>AMMO</small><b>弹药</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section world-section">
+      <div class="world-brief">
+        <div class="world-copy">
+          <h2>世界观</h2>
+          <p class="world-tagline">最后机遇</p>
+          <p>2023年，旧秩序在数周内坍塌。台海危机、俄罗斯政变、北约东扩与亚洲战略重组接连发生。中国不得不面对这一严峻的现实局面：中美之间的战争早已不再是政客之间的一张牌，世界大战已经进入了倒计时。</p>
+          <div class="brief-tags" aria-label="战略简报标签">
+            <span>CLASSIFIED</span>
+            <span>STRATEGIC BRIEFING</span>
+            <span>ALTERNATE HISTORY</span>
+            <span>2023 CRISIS CHAIN</span>
+          </div>
+          <article class="world-event-card" aria-live="polite">
+            <p class="world-event-date"></p>
+            <h3></h3>
+            <p class="world-event-detail"></p>
+          </article>
+        </div>
+        <ol class="world-timeline" aria-label="世界观时间线"></ol>
+      </div>
+    </section>
+
+    <section id="game-loop" class="section campaign-plan-section campaign-globe-section">
+      <div class="campaign-globe-layout">
+        <div class="globe-panel">
+          <div class="globe-stage" aria-label="数字地球仪">
+            <canvas class="globe-canvas"></canvas>
+            <div class="globe-fallback" aria-hidden="true">
+              <span></span>
+            </div>
+            <svg class="campaign-link-overlay" aria-hidden="true"></svg>
+            <div class="globe-tooltip" hidden></div>
+          </div>
+        </div>
+        <aside class="chapter-panel" aria-label="战役章节列表">
+          <div class="chapter-panel-head">
+            <button class="chapter-reset" type="button" hidden>返回章节选择</button>
+          </div>
+          <div class="chapter-card-grid"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="units" class="section units-section">
+      <div class="unit-layout">
+        <div class="unit-left">
+          <div class="unit-heading">
+            <div>
+              <h2>单位介绍（单位持续更新中）</h2>
+              <p>体验各国公开的最新装备，场内所有数值均按照官方数据等比例估算，现实就是最好的平衡！</p>
+            </div>
+            <div class="faction-toggle" aria-label="阵营切换">
+              <button class="is-active" type="button" data-faction="china">中</button>
+              <button type="button" data-faction="usa">美</button>
+            </div>
+          </div>
+          <div class="unit-type-grid" aria-label="单位种类">
+            <button class="unit-type-card is-active" type="button" data-type="infantry">
+              <span>INF</span><b>步兵部队</b><small>INFANTRY</small>
+            </button>
+            <button class="unit-type-card" type="button" data-type="armor">
+              <span>ARM</span><b>装甲部队（部分）</b><small>ARMOR</small>
+            </button>
+            <button class="unit-type-card" type="button" data-type="aviation">
+              <span>AVN</span><b>陆航部队</b><small>AVIATION</small>
+            </button>
+            <button class="unit-type-card" type="button" data-type="support">
+              <span>SUP</span><b>战略保障部队</b><small>SUPPORT</small>
+            </button>
+            <button class="unit-type-card" type="button" data-type="artillery">
+              <span>ART</span><b>火炮部队</b><small>ARTILLERY</small>
+            </button>
+          </div>
+        </div>
+        <div class="unit-wheel-panel" aria-label="单位抽拉式转盘">
+          <div class="unit-wheel" tabindex="0">
+            <div class="wheel-track" aria-hidden="true"></div>
+            <div class="wheel-list" aria-label="单位列表"></div>
+            <div class="unit-identity">
+              <h3></h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" class="section join">
+      <div>
+        <h2>项目仍在开发中。</h2>
+        <p>关注项目进度、加入社群频道，或通过邮箱与开发组取得联系。</p>
+      </div>
+      <div class="link-panel follow-panel" aria-label="项目关注入口">
+        <span class="button primary follow-link follow-steam" role="link" aria-disabled="true" tabindex="0">
+          Steam
+          <span class="follow-popover">游戏预计于7月15日于Steam开启预售，敬请期待。</span>
+        </span>
+        <a class="button ghost follow-link" href="https://b23.tv/eGxnuTN" target="_blank" rel="noopener">Bilibili</a>
+        <a class="button ghost follow-link" href="https://www.xiaoheihe.cn/app/user/profile/64e16b0f2429" target="_blank" rel="noopener">小黑盒</a>
+        <div class="button ghost follow-link follow-hover follow-community" tabindex="0">
+          社群频道
+          <div class="follow-popover community-popover">
+            <a href="https://discord.gg/xY3KnraYA" target="_blank" rel="noopener">Discord频道</a>
+            <div class="qr-box">
+              <img src="assets/qr/qq-group.jpg" alt="静默区内测QQ群二维码">
+              <span>QQ群：688977420</span>
+            </div>
+          </div>
+        </div>
+        <div class="button ghost follow-link follow-hover" tabindex="0">
+          邮箱地址
+          <span class="follow-popover">caffecayu@gmail.com</span>
+        </div>
+        <div class="button ghost follow-link follow-hover follow-donate" tabindex="0">
+          赞赏通道
+          <div class="follow-popover donate-popover">
+            <div class="qr-box">
+              <img src="assets/qr/wechat-pay.jpg" alt="微信支付二维码">
+              <span>微信支付</span>
+            </div>
+            <div class="qr-box">
+              <img src="assets/qr/alipay-pay.jpg" alt="支付宝二维码">
+              <span>支付宝</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SILENT AREA. All rights reserved.</p>
+    <p>Built for tactical players who read the map before firing.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
